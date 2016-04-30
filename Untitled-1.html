@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hardcore Tackle</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css">
+<link href="CSS/style.css" rel="stylesheet" type="text/css">
+
+
+
+<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+
+<style rel="stylesheet" type="text/css">
+
+.img {
+	display: table-caption;
+	caption-side: bottom;
+	font-size: 100%;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	text-align: center;	
+}
+
+
+ui-content {
+	/*display: inline-block; */
+	
+	
+}
+
+listview {
+	/*display: inline-block; */
+	
+}
+
+
+
+</style>
+
+
+
+
+
+
+<body>
+    <div data-role="page" id="Home"> <!-- HOME PAGE -->
+      <div data-role="header" align="center">
+        <img src="Images/HardcoreLogo.png" width="463"/>
+      </div>
+      <div data-role="content" data-theme="a">
+          <ul data-inset="true">
+          	<li data-role="button" data-icon="arrow-r" onClick="window.location.href = 'store.html';">Browse Store</li>
+            <li data-role="button" data-icon="arrow-r"><a href="#About">About Us</a></li>
+            <li data-role="button" data-icon="arrow-r"><a href="#Contact">Contact</a></li>
+            <li data-role="button" data-icon="arrow-r" onClick="window.location.href = 'weather.html';">Weather Info</li>
+        </ul>  
+      </div>
+    
+      </div>
+    </div> <!-- HOME PAGE -->
+    
+    
+    <div data-role="page" id="About" data-add-back-btn="true" data-position="fixed"> <!-- ABOUT PAGE -->
+      <div data-role="header">
+        <h1>About Us</h1>
+      </div> 
+      
+          
+      	<div data-role="listview" >
+            <ul data-role="listview" class="ui-alt-icon">
+                <li>
+                <span style="display:inline-block;">
+					<img src="Images/matt.jpg" style="max-width:100%; display:inline-block;"/>
+                </span>
+                <div class="paragraph" style="text-align:left;display:block;"><font size="5">Matt Sisler, Red Lake Falls,MN.</font><br>Matt is the owner and founder of <em>Hardcore Tackle</em>. Matt has had a passion his whole life for fishing and decided to start making his own tackle and fishing accessories. When Matt started this company, not only did he want to make tackle, he wanted to make a difference for those who suffer from one or multiple brain Arteriovenous Malformation's (AVM). Matt want's to make this company big, not for the money, but for the awareness of AVM's. Matt has had two AVM's, and just wants to spread the awareness and help those who suffer.</div>
+                </li> 
+                
+
+                <li>
+<span style="display: table;width:auto;position:relative;float:left;max-width:100%;;clear:left;margin-top:0px;*margin-top:0px">
+<a><img src="Images/Josh.jpg" style="margin-top: 10px; margin-bottom: 10px; margin-left: 0px; margin-right: 10px; border-width:1px;padding:3px; max-width:50%" class="img"></a>
+</span>
+                       
+<div class="paragraph" style="text-align:left;display:block;"><font size="5">Josh Sorenson, Faribault, MN</font><br> Josh is one of Matt's friends and unoffical brother. Josh has learned many things from Matt when fishing for Walleye and Northerns. Josh currently works on helping HC tackle with their mobile website.</div>
+				</li>               
+            </ul>          
+		</div>    
+
+
+      
+        <div data-role="footer"  data-theme="a">
+            <nav data-role="navbar">
+            <ul><li><a href="#Home" data-icon="home" data-theme="a">Home</a></li></ul>
+            </nav>
+        </div>
+    </div> <!-- ABOUT PAGE -->
+    
+    
+    <div data-role="page" id="Contact" data-position="fixed" data-add-back-btn="true"> <!-- CONTACT PAGE -->
+      <div data-role="header">
+        <h1>Contact Us</h1>
+      </div>
+      <div data-role="content" style="width:41.919191919192%; padding:0 20px;">
+      <h2 class="wsite-content-title" style="text-align:left;">
+      <font size="2" style="font-weight: normal;">EMAIL ADDRESS</font>
+      </h2>
+      <div class="paragraph" style="text-align:left;"><span style="">hardcoretackle@gmail.com</span></div>
+      
+      <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">TELEPHONE NUMBER</font></h2>
+      <div class="paragraph" style="text-align:left;"><a href="tel:218-689-3183">218-689-3183</a></div>
+      <div> </div>
+      <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">PHYSICAL ADDRESS</font></h2>
+      <div class="paragraph" style="text-align:left;">18576 State Hwy 32 SE<br>Red Lake Falls, MN &nbsp;56750</div>
+      <div> </div>
+      Content</div>
+      <form method=‘post’ action=‘processform.php’><pre>
+      Name: <input type=‘text’  name=‘name’ />
+      Email: <input type=‘text’ name=‘email’ />
+     Username: <input type=‘text’ name=‘username’ />
+               <input type=‘submit’ value=‘Submit details’ />
+    </pre></form>
+
+
+
+
+        <div data-role="footer" data-position="fixed" data-theme="a">
+		<nav data-role="navbar">
+            <ul>
+                <li><a href="#Home" data-icon="home" data-theme="a">Home</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+    
+      <div data-role="footer" data-position="fixed" data-theme="a">
+		<nav data-role="navbar">
+            <ul>
+                <li><a href="Untitled-1.html" data-icon="home" data-theme="a"></a></li>
+            </ul>
+        </nav>
+</body>
+
+
+
+<?php
+if (isset($_POST[‘name’]))
+{
+  $name = $_POST[‘name’];
+  $email  = $_POST[‘email’];
+  $username = $_POST[‘username’];
+
+  echo “The data you entered was:<ul>” .
+       "Name = $name<br />" .
+       "Email = $email<br />" .
+       "Username = $username<br />" .
+       "Password = $password</ul>";
+}
+?>
+</html>
