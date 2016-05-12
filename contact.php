@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Hardcore Tackle</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta Name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 
 
@@ -21,24 +21,24 @@
 <style rel="stylesheet" type="text/css">
 
 .img {
-	display: table-caption;
-	caption-side: bottom;
-	font-size: 100%;
-	margin-top: -10px;
-	margin-bottom: 10px;
-	text-align: center;	
+  display: table-caption;
+  caption-side: bottom;
+  font-size: 100%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: center; 
 }
 
 
 ui-content {
-	/*display: inline-block; */
-	
-	
+  /*display: inline-block; */
+  
+  
 }
 
 listview {
-	/*display: inline-block; */
-	
+  /*display: inline-block; */
+  
 }
 
 
@@ -71,24 +71,24 @@ listview {
       <div class="paragraph" style="text-align:left;">18576 State Hwy 32 SE<br>Red Lake Falls, MN &nbsp;56750</div>
       <div> </div>
       Content</div>
-      <form method=‘post’ action=contact.php’><pre>
-      Name: <input type=‘text’  name=‘name’ />
-      Email: <input type=‘text’ name=‘email’ />
-     Username: <input type=‘text’ name=‘username’ />
-     <input type = "submit" name = "submit" id = "submit" value = "contact" />
+      <form method='post' action='contact.php'><pre>
+      Name: <input type='text' Name='name' />
+      Email: <input type='text' Name='email' />
+     UserName: <input type='text' Name='username' />
+     <input type = "submit" Name = "submit" id = "submit" value = "contact" />
     </pre></form>
 
 <?php
-if (isset($_POST[‘name’]))
+if (isset($_POST['name']))
 {
-  $name = $_POST[‘name’];
-  $email  = $_POST[‘email’];
-  $username = $_POST[‘username’];
+  $name = $_POST['name'];
+  $email  = $_POST['email'];
+  $username = $_POST['username'];
 
-  echo “The data you entered was:<ul>” .
+  echo "The data you entered was:<ul>" .
        "Name = $name<br />" .
        "Email = $email<br />" .
-       "Username = $username</ul>";
+       "UserName = $username</ul>";
 
 }
 ?>
