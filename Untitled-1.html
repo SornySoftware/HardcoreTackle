@@ -116,7 +116,34 @@ listview {
       <div data-role="header">
         <h1>Contact Us</h1>
       </div>
+
+      <div data-role="page" id="Contact" data-position="fixed" data-add-back-btn="true"> <!-- CONTACT PAGE -->
+      <div data-role="header">
+        <h1>Contact Us</h1>
+      </div>
       <div data-role="content" style="width:41.919191919192%; padding:0 20px;">
+      <h2 class="wsite-content-title" style="text-align:left;">
+      <font size="2" style="font-weight: normal;">EMAIL ADDRESS</font>
+      </h2>
+      <div class="paragraph" style="text-align:left;"><span style="">hardcoretackle@gmail.com</span></div>
+      
+      <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">TELEPHONE NUMBER</font></h2>
+      <div class="paragraph" style="text-align:left;"><a href="tel:218-689-3183">218-689-3183</a></div>
+      <div> </div>
+      <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">PHYSICAL ADDRESS</font></h2>
+      <div class="paragraph" style="text-align:left;">18576 State Hwy 32 SE<br>Red Lake Falls, MN &nbsp;56750</div>
+      <div> </div>
+      Content</div>
+      <form method='post' action='contact.php'><pre>
+      Name: <input type='text' Name='name' />
+      Email: <input type='text' Name='email' />
+     UserName: <input type='text' Name='username' />
+     <input type = "submit" Name = "submit" id = "submit" value = "contact" />
+    </pre></form>
+
+
+
+      <!--<div data-role="content" style="width:41.919191919192%; padding:0 20px;">
       <h2 class="wsite-content-title" style="text-align:left;">
       <font size="2" style="font-weight: normal;">EMAIL ADDRESS</font>
       </h2>
@@ -134,7 +161,7 @@ listview {
       Email: <input type=‘text’ name=‘email’ />
      Username: <input type=‘text’ name=‘username’ />
                <input type=‘submit’ value=‘Submit details’ />
-    </pre></form>
+    </pre></form> -->
 
 
 
@@ -159,17 +186,18 @@ listview {
 
 
 <?php
-if (isset($_POST[‘name’]))
+if (isset($_POST['name']))
 {
-  $name = $_POST[‘name’];
-  $email  = $_POST[‘email’];
-  $username = $_POST[‘username’];
+  $name = $_POST['name'];
+  $email  = $_POST['email'];
+  $username = $_POST['username'];
 
-  echo “The data you entered was:<ul>” .
+  echo "The data you entered was:<ul>" .
        "Name = $name<br />" .
        "Email = $email<br />" .
-       "Username = $username<br />" .
-       "Password = $password</ul>";
+       "UserName = $username</ul>";
+
 }
 ?>
+
 </html>
