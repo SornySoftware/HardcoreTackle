@@ -20,26 +20,26 @@
 
 <style rel="stylesheet" type="text/css">
 
-.img {
-  display: table-caption;
-  caption-side: bottom;
-  font-size: 100%;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  text-align: center; 
+.formInput {
+    
+    outline: none; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 5px;
+    width: 300px;
 }
+ 
 
 
-ui-content {
-  /*display: inline-block; */
-  
-  
+
+
+
+
+.formButton {
+  margin: 10px;
+  width: 300px;
 }
 
-listview {
-  /*display: inline-block; */
-  
-}
 
 
 
@@ -71,11 +71,15 @@ listview {
       <div class="paragraph" style="text-align:left;">18576 State Hwy 32 SE<br>Red Lake Falls, MN &nbsp;56750</div>
       <div> </div>
       Content</div>
+
+
       <form method='post' action='contact.php'><pre>
-      Name: <input type='text' Name='name' />
-      Email: <input type='text' Name='email' />
-     UserName: <input type='text' Name='username' />
-     <input type = "submit" Name = "submit" id = "submit" value = "contact" />
+      <div  class="formInput">
+      <input  class="formInput" type='text' Name='email' required="required" placeholder="enter email to reply to" />
+      <div class="formInput"><textarea type="text" rows="8" cols="50" id="message" required="required" placeholder="Enter Your comments here!"></textarea></div>
+      <div class="formButton"><input type = "submit" Name = "submit" id = "submit" value = "contact" /></div>
+      </div>
+      
     </pre></form>
 
 <?php
