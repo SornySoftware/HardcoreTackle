@@ -10,7 +10,6 @@
 
 
 <link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css">
-<link href="CSS/style.css" rel="stylesheet" type="text/css">
 
 
 
@@ -57,7 +56,8 @@ listview {
       </div>
       <div data-role="content" data-theme="a">
           <ul data-inset="true">
-            <li data-role="button" data-icon="arrow-r" onclick="window.location.href= 'user.php';">Create User</li>
+            <li data-role="button" data-icon="arrow-r" onclick="window.location.href = 'user.php';">Create User</li>
+            <li data-role="button" data-icon="arrow-r" onclick="window.location.href = 'userBrowse.php';">Browse User</li>
           	<li data-role="button" data-icon="arrow-r" onClick="window.location.href = 'store.html';">Browse Store</li>
             <li data-role="button" data-icon="arrow-r"><a href="#About">About Us</a></li>
             <li data-role="button" data-icon="arrow-r"><a href="#Contact">Contact</a></li>
@@ -119,64 +119,39 @@ listview {
       <div data-role="header">
         <h1>Contact Us</h1>
       </div>
-
-      <div data-role="page" id="Contact" data-position="fixed" data-add-back-btn="true"> <!-- CONTACT PAGE -->
-      <div data-role="header">
-        <h1>Contact Us</h1>
-      </div>
       <div data-role="content" style="width:41.919191919192%; padding:0 20px;">
+
       <h2 class="wsite-content-title" style="text-align:left;">
       <font size="2" style="font-weight: normal;">EMAIL ADDRESS</font>
       </h2>
-      <div class="paragraph" style="text-align:left;"><span style="">hardcoretackle@gmail.com</span></div>
+
+      <div class="paragraph" style="text-align:left;">
+      <span style="">hardcoretackle@gmail.com</span>
+      </div>
       
       <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">TELEPHONE NUMBER</font></h2>
       <div class="paragraph" style="text-align:left;"><a href="tel:218-689-3183">218-689-3183</a></div>
-      <div> </div>
       <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">PHYSICAL ADDRESS</font></h2>
       <div class="paragraph" style="text-align:left;">18576 State Hwy 32 SE<br>Red Lake Falls, MN &nbsp;56750</div>
-      <div> </div>
-      Content</div>
-      <form method='post' action='contact.php'><pre>
-      Name: <input type='text' Name='name' />
-      Email: <input type='text' Name='email' />
-     UserName: <input type='text' Name='username' />
-     <input type = "submit" Name = "submit" id = "submit" value = "contact" />
-    </pre></form>
+      </div>
 
-
-
-      <!--<div data-role="content" style="width:41.919191919192%; padding:0 20px;">
-      <h2 class="wsite-content-title" style="text-align:left;">
-      <font size="2" style="font-weight: normal;">EMAIL ADDRESS</font>
-      </h2>
-      <div class="paragraph" style="text-align:left;"><span style="">hardcoretackle@gmail.com</span></div>
-      
-      <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">TELEPHONE NUMBER</font></h2>
-      <div class="paragraph" style="text-align:left;"><a href="tel:218-689-3183">218-689-3183</a></div>
-      <div> </div>
-      <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">PHYSICAL ADDRESS</font></h2>
-      <div class="paragraph" style="text-align:left;">18576 State Hwy 32 SE<br>Red Lake Falls, MN &nbsp;56750</div>
-      <div> </div>
-      Content</div>
-      <form method=‘post’ action=‘processform.php’><pre>
-      Name: <input type=‘text’  name=‘name’ />
-      Email: <input type=‘text’ name=‘email’ />
-     Username: <input type=‘text’ name=‘username’ />
-               <input type=‘submit’ value=‘Submit details’ />
-    </pre></form> -->
-
-
-
-
-        <div data-role="footer" data-position="fixed" data-theme="a">
-		<nav data-role="navbar">
-            <ul>
-                <li><a href="#Home" data-icon="home" data-theme="a">Home</a></li>
-            </ul>
+      <div data-role="footer" data-theme="a">
+        <nav data-role="navbar">
+          <ul>
+            <li><a href="#Home" data-icon="home" data-theme="a">Home</a></li>
+          </ul>
         </nav>
-        </div>
+      </div>
     </div>
+
+
+      </div>
+
+
+
+
+
+
     
       <div data-role="footer" data-position="fixed" data-theme="a">
 		<nav data-role="navbar">
@@ -185,22 +160,5 @@ listview {
             </ul>
         </nav>
 </body>
-
-
-
-<?php
-if (isset($_POST['name']))
-{
-  $name = $_POST['name'];
-  $email  = $_POST['email'];
-  $username = $_POST['username'];
-
-  echo "The data you entered was:<ul>" .
-       "Name = $name<br />" .
-       "Email = $email<br />" .
-       "UserName = $username</ul>";
-
-}
-?>
 
 </html>

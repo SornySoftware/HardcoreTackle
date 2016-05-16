@@ -15,13 +15,22 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
 </head>
 
+<script>
+  $(document).ready(function() {
+    $("#dropLure").change(function(){
+      $("#country_hidden").val(("#itemType_id").find(":selected").text());
+    });
+  });
+</script>
+
+
+
 <style rel="stylesheet" type="text/css">
 .input {
 	padding: 10px;
 }
 
 </style>
-
 <body data-role="page" data-add-back-btn="true">
 
 
@@ -30,17 +39,22 @@
 	</div>
 	<form action="test.php" method="post">
 	<ul class="input">
-		<input name="user" value="sorny">
-		<input name="type" value="Walleye">
+		<input type="hidden" name="user" value="sorny">
+		<input type="hidden" name="type" value="Walleye">
 
-		<li><input name="lureUsed" value="Hook"></input> </li>
-		<li><input name="location" value="Minnesota"></input> </li>
+		<li><input id="dropLure" name="lureUsed" value="Hook"></input> </li>
+    Location
+		<li><input id="location" name="location" value="<?php echo $_POST['location']; ?>"></input> </li>
 		<li><input name="comments" value="Look! I caught a fish!!!"></input> </li>
-		<li><input name="wCond"    value="Windy"></input> </li>
-		<li><input name="wTemp"	   value="63"></input> </li>
-		<li><input name="wWind"    value="10NW"></input> </li>
+    Condition
+		<li><input id="wCond" name="wCond"    value="<?php echo $_POST['wCond']; ?>"></input> </li>
+    Temp
+		<li><input id="wTemp" name="wTemp"	   value="<?php echo $_POST['wTemp']; ?>"></input> </li>
+    Wind
+		<li><input id="wWind" name="wWind"    value="<?php echo $_POST['wWind']; ?>"></input> </li>
 		<li><input name="wPrecip"  value="40%"></input> </li>
-		<li><input name="wPhase" value="Full"></input> </li>
+    Moon
+		<li><input id="wMoon" name="wPhase" value="Full"></input> </li>
 	</ul>
 	<button type="submit"><a href="test.php">post</a></button>
 	</form>
@@ -81,22 +95,30 @@
 
     </tbody>
 
+
+
+<pre>
 <?php 
 //include 'database.php';
+var_dump($_POST);
+// echo htmlentities($location);
+foreach ($_POST as $key => $value)
+ echo "Field ".htmlspecialchars($key)." is ".htmlspecialchars($value)."<br>";
+
 if (isset($_POST['comments']))
 {
-	$lureUsed = $_POST['lureUsed'];
-	$location = $_POST['location'];
-	$comments = $_POST['comments'];
-	echo "<script type='text/javascript'>alert('$lureUsed');</script>";
-	
-	$wCond = $_POST['wCond'];
-	$wTemp = $_POST['wTemp'];
-	$wWind = $_POST['wWind'];
-	$wPrecip = $_POST['wPrecip'];
-	$wPhase = $_POST['wPhase'];
-	
-	
+  $lureUsed = $_POST['lureUsed'];
+  $location = $_POST['location'];
+  $comments = $_POST['comments'];
+  echo "<script type='text/javascript'>alert('$lureUsed');</script>";
+  
+//  $wCond = $_POST['wCond'];
+//  $wTemp = $_POST['wTemp'];
+//  $wWind = $_POST['wWind'];
+//  $wPrecip = $_POST['wPrecip'];
+//  $wPhase = $_POST['wPhase'];
+  
+  
   $pdo = Database::connect();
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   //echo "<script type='text/javascript'>alert('$message');</script>";
@@ -106,6 +128,15 @@ if (isset($_POST['comments']))
   Database::disconnect();
 }
 ?>
+</pre>
+
+  <div data-role="footer">
+    <nav data-role="navbar">
+    <ul>
+        <li><a data-icon="home" data-theme="a" onClick="window.location.href = 'Untitled-1.html';">Home</a></li>
+    </ul>
+    </nav>
+  </div>
 </body>
 
 </html>

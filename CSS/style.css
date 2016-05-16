@@ -1,0 +1,66 @@
+#fishContainer {
+	align-content: center;
+	padding: 5px;
+}
+
+#wrapper {
+    width: 500px;
+    border: 1px solid black;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+#fish {
+    width: 200px;
+    float:left; /* add this */
+    border: 1px solid red;
+    height: 100%
+}
+#dropdown {
+    border: 1px solid green;
+    float: right;
+    overflow: hidden; /* if you don't want #second to wrap below #first */
+    height: 100%;
+}
+
+#weather {
+
+	height: 225px;
+}
+
+#textField {
+	width: 200px;
+	border: 1px solid black;
+	float: left;
+	overflow: hidden;
+}
+
+
+#label {
+	float: left;
+	max-width: 50px;
+	border: 1px red;
+}
+
+#sub {
+	width: 100px;
+	float: right;
+	overflow: hidden;
+
+}
+
+.fishImageContainer {
+	border: 1px red;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.imageContainer {
+	align-content: center;
+	border: 10px solid red;
+}
+
+#comments {
+	resize: none;
+	overflow-y: none;
+	height: 99%
+
+}

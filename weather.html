@@ -22,8 +22,14 @@
         contentType: "application/json",
         dataType: 'jsonp',
         success: function (json) {		
+
+      $("#strLocation").val(json.query.results.channel.title);
+      $("#strDate").val(json.query.results.channel.item.forecast[0].date);
+      $("#strTemp").val(json.query.results.channel.item.condition.temp + "&#176;F");
+      $("#strSummary").val(json.query.results.channel.item.condition.text);
+      $("#strSpeed").val(json.query.results.channel.wind.speed+" MPH");
 			
-        	$('#title-weather').html(json.query.results.channel.title);
+      $('#title-weather').html(json.query.results.channel.title);
 			$('#date').html(json.query.results.channel.item.forecast[0].date);
 			$('#curTemp').html(json.query.results.channel.item.condition.temp + "&#176;F");			
 			var myClass = "wi wi-yahoo-" + json.query.results.channel.item.condition.code;		
@@ -115,6 +121,7 @@
 </style>
 <body>
 <div data-role="page" id="weather">
+
   <div data-role="header">
     <h1 id="title-weather">Local Weather Report</h1>
     <h1 id="date"><h1>
@@ -123,28 +130,38 @@
   <div data-role="content" align="center"> <!-- MAIN -->
   <span>
   	<i id="iconRef"></i>
-  	<span id="curTemp"></span> 
+  	<span id="curTemp" name="wTemp"></span> 
 
     
     <div data-role="content" id="moonData"> <!-- Moon -->
     <i class="wi wi-moon-alt-waxing-crescent-5" id="iconMoon"></i>
-  	<p id="moonPhase"> Phase </p>
-    </div> <!-- Moon -->
-    
-    
+  	<p id="moonPhase" name="wMoon"> Phase </p>
+    </div> <!-- Moon -->    
   </span>
   
     <div data-role="content" id="windData"> <!-- Wind -->
 	<i id="iconWind" class="wi wi-wind"></i>
-    <p id="windSpeed"> Speed </p>
+    <p id="windSpeed" name="wWind"> Speed </p>
     <p id="windChill"> Chill </p>
     </div> <!-- Wind -->
     
 
-    <p id="curSummary">Mostly sunny </p>
+    <p id="curSummary" name="wCond">Mostly sunny </p>
     <span>    
     <p id="riseTime"></p> 
     </span> 
+
+    <FORM NAME ="form1" METHOD ="POST" ACTION = "fishlog.php">
+      <input type="hidden" id="strLocation" name="location" value="" />
+      <input type="hidden" id="strDate" name="date" value="" />
+      <input type="hidden" id="strTemp" name="wTemp" value="" />
+      <input type="hidden" id="strSummary" name="wCond" value="" />
+      <input type="hidden" id="strSpeed" name="wWind" value="" />
+      <INPUT TYPE = "Submit" Name = "btnLog" VALUE = "Log Fish" />
+    </FORM>
+
+
+
 
   </div><!-- MAIN -->
 
@@ -158,9 +175,6 @@
     </nav>
   </div>
 </div>
-
-
-
 
 
 </body>

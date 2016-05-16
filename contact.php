@@ -18,35 +18,6 @@
 <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
 
 
-<style rel="stylesheet" type="text/css">
-
-.formInput {
-    
-    outline: none; 
-    margin-left: 10px;
-    margin-right: 10px;
-    margin: 5px;
-    width: 300px;
-}
- 
-
-
-
-
-
-
-.formButton {
-  margin: 10px;
-  width: 300px;
-}
-
-
-
-
-</style>
-
-
-
 
 
 
@@ -69,33 +40,7 @@
       <div> </div>
       <h2 class="wsite-content-title" style="text-align:left;"><font size="2" style="font-weight: normal;">PHYSICAL ADDRESS</font></h2>
       <div class="paragraph" style="text-align:left;">18576 State Hwy 32 SE<br>Red Lake Falls, MN &nbsp;56750</div>
-      <div> </div>
-      Content</div>
-
-
-      <form method='post' action='contact.php'><pre>
-      <div  class="formInput">
-      <input  class="formInput" type='text' Name='email' required="required" placeholder="enter email to reply to" />
-      <div class="formInput"><textarea type="text" rows="8" cols="50" id="message" required="required" placeholder="Enter Your comments here!"></textarea></div>
-      <div class="formButton"><input type = "submit" Name = "submit" id = "submit" value = "contact" /></div>
-      </div>
       
-    </pre></form>
-
-<?php
-if (isset($_POST['name']))
-{
-  $name = $_POST['name'];
-  $email  = $_POST['email'];
-  $username = $_POST['username'];
-
-  echo "The data you entered was:<ul>" .
-       "Name = $name<br />" .
-       "Email = $email<br />" .
-       "UserName = $username</ul>";
-
-}
-?>
 
 
 
