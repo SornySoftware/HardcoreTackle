@@ -5,18 +5,14 @@
 <title>Hardcore Tackle</title>
 
 <meta Name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css">
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<link src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.css" rel="stylesheet" type="text/css">
+<script src="./resources/jquery-1.9.1.js" type="text/javascript"></script>
+<script src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.js" type="text/javascript"></script>
 
 
 
 <link href="CSS/style.css" rel="stylesheet" type="text/css">
 
-
-
-<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
 <!-- Latest compiled and minified CSS
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 

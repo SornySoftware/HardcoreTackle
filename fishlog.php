@@ -4,10 +4,10 @@
 	<title>Log Fish Experience</title>
 	<meta charset="utf-8">
 	<meta Name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<link href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css">
 	<link href="../HardcoreTackle/CSS/style.css" rel="stylesheet" type="text/css">
-	<script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
-	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>	
+	<link src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.css" rel="stylesheet" type="text/css">
+	<script src="./resources/jquery-1.9.1.js" type="text/javascript"></script>
+	<script src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.js" type="text/javascript"></script>	
 </head>
 
 <script type="text/javascript">
