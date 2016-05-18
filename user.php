@@ -108,7 +108,7 @@ if (isset($_POST['first']))
   <div data-role="footer">
       <nav data-role="navbar">
       <ul>
-          <li><a data-icon="home" data-theme="a" onClick="window.location.href = 'Untitled-1.html';">Home</a></li>
+          <li><a data-icon="home" data-theme="a" onClick="window.location.href = 'index.html';">Home</a></li>
       </ul>
       </nav>
   </div>

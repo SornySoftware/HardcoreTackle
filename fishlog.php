@@ -88,7 +88,7 @@
 	<div data-role="footer">
 		<nav data-role="navbar">
             <ul>
-                <li><a href="Untitled-1.html" data-icon="home" data-theme="a">Home</a></li>
+                <li><a href="index.html" data-icon="home" data-theme="a">Home</a></li>
             </ul>
         </nav>
 	</div>
