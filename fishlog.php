@@ -5,9 +5,9 @@
 	<meta charset="utf-8">
 	<meta Name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 	<link href="../HardcoreTackle/CSS/style.css" rel="stylesheet" type="text/css">
-	<link src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.css" rel="stylesheet" type="text/css">
-	<script src="./resources/jquery-1.9.1.js" type="text/javascript"></script>
-	<script src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.js" type="text/javascript"></script>	
+    <link rel="stylesheet" href="CSS/themes/default/jquery.mobile-1.4.5.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>	
 </head>
 
 <script type="text/javascript">

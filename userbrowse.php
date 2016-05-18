@@ -4,18 +4,20 @@
   <title>Check Out Users!</title>
 <meta Name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <link src="CSS/style.css" rel="stylesheet" type="text/css">
-<link src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.css" rel="stylesheet" type="text/css">
-<script src="./resources/jquery-1.9.1.js" type="text/javascript"></script>
-<script src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="CSS/themes/default/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
 
 <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
 
 <link href="CSS/style.css" rel="stylesheet" type="text/css">
 </head>
-<body data-role="page" data-theme="a">
-  <div data-role="header" data-theme="a" data-add-back-btn="true" data-position="fixed">
+<body data-role="page" data-theme="b">
+  <div data-role="header" data-theme="b" data-add-back-btn="true" data-position="fixed">
     <h3>Browse Users!</h3>
+    <a role="button" data-role="button" href="index.html" data-rel="back" >Back</a>
+
   </div>
 
   <div class="container" id="myTable" data-role="content">
@@ -50,13 +52,13 @@
     ?>
     </tbody>
     </table>
-  </div>
-  <div data-role="footer">
-    <nav data-role="navbar">
-    <ul>
-        <li><a data-icon="home" data-theme="a" onClick="window.location.href = 'index.html';">Home</a></li>
-    </ul>
-    </nav>
+    <div data-role="footer">
+      <nav data-role="navbar">
+      <ul>
+          <li><a data-icon="home" data-theme="b" onClick="window.location.href = 'index.html';">Home</a></li>
+      </ul>
+      </nav>
+    </div>
   </div>
 </body>
 </html>

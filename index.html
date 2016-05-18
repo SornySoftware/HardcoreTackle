@@ -5,17 +5,17 @@
 <title>Hardcore Tackle</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<link rel="stylesheet" href="CSS/themes/default/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
 
 
 
 
-<link src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.css" rel="stylesheet" type="text/css">
-<script src="./resources/jquery-1.9.1.js" type="text/javascript"></script>
-<script src="./resources/jquery.mobile-1.0.1/jquery.mobile-1.0.1.min.js" type="text/javascript"></script>
 
 
-<style rel="stylesheet" type="text/css">
 
+<style>
 .img {
 	display: table-caption;
 	caption-side: bottom;
@@ -36,9 +36,6 @@ listview {
 	/*display: inline-block; */
 	
 }
-
-
-
 </style>
 
 
@@ -48,17 +45,17 @@ listview {
 
 <body>
     <div data-role="page" id="Home"> <!-- HOME PAGE -->
-      <div data-role="header" align="center">
+      <div data-role="header" align="center" data-theme="b">
         <img src="Images/HardcoreLogo.png" width="463"/>
       </div>
-      <div data-role="content" data-theme="a">
+      <div data-role="content" data-theme="b">
           <ul data-inset="true">
-            <li data-role="button" data-icon="arrow-r" onclick="window.location.href = 'user.php';">Create User</li>
-            <li data-role="button" data-icon="arrow-r" onclick="window.location.href = 'userBrowse.php';">Browse User</li>
-          	<li data-role="button" data-icon="arrow-r" onClick="window.location.href = 'store.html';">Browse Store</li>
-            <li data-role="button" data-icon="arrow-r"><a href="#About">About Us</a></li>
-            <li data-role="button" data-icon="arrow-r"><a href="#Contact">Contact</a></li>
-            <li data-role="button" data-icon="arrow-r" onClick="window.location.href = 'weather.html';">Weather Info</li>
+            <li class="ui-btn" data-icon="arrow-r" onclick="window.location.href = 'user.php';">Create User</li>
+            <li class="ui-btn" data-icon="arrow-r" onclick="window.location.href = 'userBrowse.php';">Browse User</li>
+          	<li class="ui-btn" data-icon="arrow-r" onClick="window.location.href = 'store.html';">Browse Store</li>
+            <li class="ui-btn" data-icon="arrow-r"><a href="#About">About Us</a></li>
+            <li class="ui-btn" data-icon="arrow-r"><a href="#Contact">Contact</a></li>
+            <li class="ui-btn" data-icon="arrow-r" onClick="window.location.href = 'weather.html';">Weather Info</li>
 
         </ul>  
       </div>
@@ -68,8 +65,9 @@ listview {
     
 
     
-    <div data-role="page" id="About" data-add-back-btn="true" data-position="fixed"> <!-- ABOUT PAGE -->
+    <div data-role="page" id="About" data-rel="back" data-position="fixed"> <!-- ABOUT PAGE -->
       <div data-role="header">
+      <a role="button" data-role="button" href="#Home" data-rel="back" >Back</a>      
         <h1>About Us</h1>
       </div> 
       
@@ -112,8 +110,9 @@ listview {
     </div> <!-- ABOUT PAGE -->
     
     
-    <div data-role="page" id="Contact" data-position="fixed" data-add-back-btn="true"> <!-- CONTACT PAGE -->
+    <div data-role="page" id="Contact" data-position="fixed"> <!-- CONTACT PAGE -->
       <div data-role="header">
+      <a role="button" data-role="button" href="#Home" data-rel="back" >Back</a>
         <h1>Contact Us</h1>
       </div>
       <div data-role="content" style="width:41.919191919192%; padding:0 20px;">
